@@ -1,0 +1,205 @@
+/* Navbar-stil */
+.navbar {
+    width: 100vw; /* Strækker sig over hele skærmen */
+    background-color: #EFC5A8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    position: fixed; /* Gør navbaren fast øverst på skærmen */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Sørger for at navbaren ligger øverst */
+    width: 100%; /* Sikrer at navbaren dækker hele bredden af skærmen */
+}
+
+/* Forhindrer horisontal scrolling */
+body {
+    overflow-x: hidden; /* Skjuler horisontal scrollbar */
+    margin-top: 80px; /* Lægger lidt afstand mellem navbar og resten af indholdet */
+}
+
+/* Styling af links i navbar */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* Menu toggle på mobile enheder */
+.menu-toggle {
+    display: none;
+    font-size: 36px;
+    cursor: pointer;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: #EFC5A8;
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        left: 20px;
+    }
+}
+
+/* Footer-stil (kun nederst, når man scroller ned) */
+.footer {
+    width: 100vw; /* Strækker sig over hele skærmen */
+    background-color: #2A2E38;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative; /* Normal position, ikke fast */
+    margin-top: 50px; /* Læg lidt afstand mellem indhold og footer */
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.tiktok-button {
+    background-color: #FF0050;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.tiktok-button:hover {
+    background-color: #cc0040;
+}
+
+  
+  /* Layout for tekst og billeder */
+  .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 0 20px;
+  }
+  
+  /* Tekstindhold */
+  .text-content {
+    max-width: 60%;
+    padding: 30px;
+  }
+  
+  .text-content h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .text-content p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .text-content ul {
+    font-size: 20px;
+    margin-bottom: 15px;
+    list-style: disc;
+    padding-left: 20px;
+  }
+  
+  /* Billedplacering */
+  .image-placeholder {
+    width: 500px;   /* 500x500 px for begge billeder */
+    height: 500px;
+    background-color: #ccc;
+    margin-top: 70px;
+  }
+  
+  /* Billede 1: med 70px margin til højre */
+  .first-image {
+    margin-right: 70px;
+  }
+  
+  /* Marketing-info-blok: starter med margin: top 40px, 70px til højre og 590px fra venstre */
+/* Marketing-info-blok: Starter 590px inde fra venstre og har reduceret mellemrum */
+.marketing-info-full {
+  margin: 20px 70px 0 590px;  /* Topmargin 20px, højre margin 70px, bund 0, venstremargin 590px */
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.marketing-info-full h1 {
+  font-size: 36px;    /* Overskriften som h1 skal være stor */
+  font-weight: bold;
+  margin-bottom: 10px;  /* Mindre bundmargen for at reducere gap */
+}
+
+.marketing-info-full p {
+  font-size: 20px;
+  margin-top: 0;        /* Fjerner unødvendig topmargin på afsnit */
+  margin-bottom: 15px;  /* Standard bundmargen */
+}
+
+.marketing-info-full ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 0 0 15px 20px; /* Ensartet indrykning og reduceret mellemrum */
+}
+
+  
+/* Anden sektion: Billede 2 skal sidde 70px fra venstre og rykkes 180px op */
+.second-section .second-image {
+    margin-left: 70px;
+    margin-top: -320px;  /* Tidligere -80px, nu rykket 100px mere op */
+  }
+
+
+  /* Marketing-info-blok: Starter 590px inde fra venstre og har reduceret mellemrum */
+.marketing-info-full {
+    margin: 20px 70px 0 590px;  /* Topmargin 20px, højre margin 70px, bund 0, venstremargin 590px */
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  
+  .marketing-info-full h1 {
+    font-size: 36px;    /* Overskriften som h1 skal være stor */
+    font-weight: bold;
+    margin-bottom: 10px;  /* Mindre bundmargen for at reducere gap */
+  }
+  
+  .marketing-info-full p {
+    font-size: 20px;
+    margin-top: 0;        /* Fjerner unødvendig topmargin på afsnit */
+    margin-bottom: 15px;  /* Standard bundmargen */
+  }
+  
+  .marketing-info-full ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin: 0 0 15px 20px; /* Ensartet indrykning og reduceret mellemrum */
+  }
+  
