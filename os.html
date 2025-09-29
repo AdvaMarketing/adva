@@ -1,62 +1,269 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Om Os - Adva Organic Marketing</title>
-  <script defer src="navbar.js"></script>
-  <link rel="stylesheet" href="style.css">
+   <title>Adva Organic Marketing</title>
+   <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+<style>
+    p.bullet {
+      font-size: 3rem;
+      position: relative;
+      padding-left: 20px; /* plads til bullet */
+    }
+
+    p.bullet::before {
+      content: "•";        /* selve bullet */
+      position: absolute;
+      left: 0;
+      color: black;        /* bullet farve */
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+
+      footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #ffffff;
+    border-top: 1px solid #ccc;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left p {
+    margin: 0 0 10px 0;
+    font-size: 1rem;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 10px;
+  }
+
+  .social-icons a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem; /* du kan erstatte med icons via <i> eller img */
+  }
+
+  .right {
+    display: flex;
+    gap: 80px;
+    size: 2rem;
+  }
+
+  .right-column h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .right-column a {
+    display: block;
+    text-decoration: none;
+    color: #555;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+  }
+  </style>
 </head>
+
 <body>
-  <!-- Navbar-container som skal blive fyldt via JavaScript -->
-  <div id="navbar-container"></div>
 
-  <main>
-    <!-- Første sektion: "Om Os" tekst og billede 1 -->
-    <div class="content-wrapper">
-      <div class="text-content">
-        <h1>Om Os</h1>
-        <p>Vi er to unge drenge på 15 år, der har valgt at starte Adva Organic Marketing, fordi vi tror på, at ægte, organisk vækst skaber langvarige relationer og succesfulde brands.</p>
-        <p>Vores passion for digitale medier og sociale platforme har givet os en dyb indsigt i, hvad der engagerer vores generation. Vi har set, hvordan små, kreative ideer kan vokse og skabe store resultater – uden at det nødvendigvis kræver store annonceringsbudgetter.</p>
-        <p>Vi arbejder målrettet med at udvikle strategier, der sætter ægte forbindelse med publikum i fokus. Vores tilgang er både moderne og innovativ, og vi ønsker at vise, at selv unge kan gøre en stor forskel i en verden, hvor autenticitet og bæredygtighed vinder frem.</p>
-      </div>
-      <div class="image-placeholder first-image">
-        <!-- Billede 1: 500x500 px, med 70px margin til højre -->
-      </div>
-    </div>
-    
-    <!-- Marketing-info-blok: "Hvad er organisk marketing?" placeret under billede 1 -->
-    <div class="marketing-info-full">
-      <h1>Hvad er organisk marketing?</h1>
-      <p>Organisk marketing handler om at opnå synlighed uden betalte annoncer. Metoden bygger på at:</p>
-      <ul>
-        <li>Skabe kvalitetsindhold</li>
-        <li>Optimere søgemaskineplacering</li>
-        <li>Engagere med publikum på sociale medier</li>
-      </ul>
-      <p>Ved at opbygge autentiske relationer og levere relevant indhold kan virksomheder opnå varig vækst uden store investeringer i betalt reklame.</p>
-    </div>
-    
-    <!-- Anden sektion: Billede 2 og fortsættende tekst -->
-    <div class="content-wrapper second-section">
-      <div class="image-placeholder second-image">
-        <!-- Billede 2: 500x500 px, placeret 70px fra venstre side -->
-      </div>
-      <div class="text-content">
-        <p>Vi tror på, at den rette kombination af kreativitet og strategisk tænkning kan give virksomheder en konkurrencemæssig fordel. Vores tilgang bygger på at se muligheder, hvor andre ser begrænsninger.</p>
-        <p>Hos Adva Organic Marketing handler det om at skabe en bæredygtig, ægte og engageret online tilstedeværelse, som giver resultater både på kort og lang sigt.</p>
-      </div>
-    </div>
-  </main>
+    <!--Hovedbar-->
+    <div style="
+    display: flex;               /* gør indholdet til en linje */
+    align-items: center;         /* lodret centrer */
+    gap: 20px;                   /* afstand mellem elementer */
+    margin-top: 40px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5rem;
+  ">
+    <a href="index.html" style="
+      text-decoration: none;     
+      color: black;      
+      background-color: #ffffff; 
+      padding: 10px 20px; 
+      border-radius: 5px;
+      margin-left: 40px;
+      margin-right: auto;
+    ">Adva Organic Marketing</a>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-content">
-      <p>&copy; 2024 Adva Organic Marketing. Alle rettigheder forbeholdt.</p>
-      <a href="https://www.tiktok.com/@advaorganicmarketing" class="tiktok-button" target="_blank">
-        Følg os på TikTok
-      </a>
+    <a href="home.html" style="
+      text-decoration: none;     
+      color: black;      
+      background-color: #ffffff; 
+      padding: 10px 20px; 
+      border-radius: 5px;
+    ">Home</a>
+
+    <a href="servicer.html" style="
+      text-decoration: none;     
+      color: black;      
+      background-color: #ffffff; 
+      padding: 10px 20px; 
+      border-radius: 5px;
+    ">Servicer</a>
+
+    <a href="book.html" style="
+      text-decoration: none;     
+      color: black;      
+      background-color: #ffffff; 
+      padding: 10px 20px; 
+      border-radius: 5px;
+    ">Kontakt Os</a>
+
+    <a href="os.html" style="
+      text-decoration: none;     
+      color: black;      
+      background-color: #ffffff; 
+      padding: 10px 20px; 
+      border-radius: 5px;
+    ">Om Os</a>
     </div>
-  </footer>
+ <hr style="margin-top: 40px;">
+
+    <!--Om Os tekst-->
+    <div>
+
+        <h1 style="
+            margin-top: 120px;
+            margin-left: 100px;
+            margin-right: 40px;
+            margin-bottom: 0px;
+            font-family: 'Poppins', sans-serif; /* Poppins som font */
+            font-size: 4rem;">
+            Om Os
+        </h1>
+
+        <p style="
+            margin-top: 0px;
+            margin-left: 120px;
+            margin-right: 40px;
+            font-family: 'Josefin Sans', sans-serif; font-size: 2.3rem;
+            color: grey;">
+            Hvem er vi?
+        </p>
+
+    </div>
+    <div style="display: flex; align-items: flex-start; gap: 20px;">
+
+
+        <pre style="
+            margin-top: 50px;
+            margin-left: 120px;
+            margin-right: 40px;
+            font-family: 'Josefin Sans', sans-serif; font-size: 1.8rem;
+            line-height: 2">
+Vi er to unge drenge på 15 år, der har valgt at starte 
+Adva Organic Marketing, fordi vi tror på, at ægte, 
+organisk vækst skaber langvarige relationer og 
+succesfulde brands.
+
+Vores passion for digitale medier og sociale platforme 
+har givet os en dyb indsigt i, hvad der engagerer vores 
+generation. Vi har set, hvordan små, kreative ideer kan 
+vokse og skabe store resultater – uden at det nødvendigvis 
+kræver store annonceringsbudgetter.
+
+Vi arbejder målrettet med at udvikle strategier, der 
+sætter ægte forbindelse med publikum i fokus. Vores 
+tilgang er både moderne og innovativ, og vi ønsker at 
+vise, at selv unge kan gøre en stor forskel i en verden, 
+hvor autenticitet og bæredygtighed vinder frem.
+        </pre>
+
+
+    <img src="Images/_BCL4425.JPG" width="700" alt="Placeholder" style="margin-left: 70px;">
+
+    </div>
+    <div>
+
+        <p style="
+            margin-top: 100px;
+            margin-left: 950px;
+            margin-right: 40px;
+            font-family: 'Josefin Sans', sans-serif; font-size: 2.3rem;
+            color: grey;">
+            Hvad er organisk markedsføring?
+        </p>
+
+    </div>
+    <div style="display: flex; align-items: flex-start; gap: 40px; margin-top: 50px;">
+  
+  <!-- Venstre kolonne: Billede -->
+  <div>
+    <img src="Images/_BCL4425.JPG" alt="Billede" style="width: 700px; height: auto; margin-left: 110px;">
+  </div>
+  
+  <!-- Højre kolonne: Tekst -->
+  <div>
+    <pre style="font-family: 'Josefin Sans', sans-serif; font-size: 1.8rem; line-height: 2; margin-left: 100px;">
+Organisk marketing handler om at opnå synlighed uden 
+betalte annoncer. Metoden bygger på at:
+    </pre>
+
+    <p class="bullet" style="font-family: 'Josefin Sans', sans-serif; font-size: 1.8rem; line-height: 2; margin-left: 100px;">
+Skabe kvalitetsindhold
+    </p>
+
+    <p class="bullet" style="font-family: 'Josefin Sans', sans-serif; font-size: 1.8rem; line-height: 2; margin-left: 100px;">
+Optimere søgemaskineplacering
+    </p>
+
+    <p class="bullet" style="font-family: 'Josefin Sans', sans-serif; font-size: 1.8rem; line-height: 2; margin-left: 100px;">
+Engagere med publikum på sociale medier
+    </p>
+
+    <pre style="font-family: 'Josefin Sans', sans-serif; font-size: 1.8rem; line-height: 2; margin:0; margin-left: 100px;">
+Ved at opbygge autentiske relationer og levere relevant
+indhold kan virksomheder opnå varig vækst uden store 
+investeringer i betalt reklame.
+
+Vi tror på, at den rette kombination af kreativitet og 
+strategisk tænkning kan give virksomheder en 
+konkurrencemæssig fordel. Vores tilgang bygger på at 
+se muligheder, hvor andre ser begrænsninger.
+
+Hos Adva Organic Marketing handler det om at skabe 
+en bæredygtig, ægte og engageret online tilstedeværelse, 
+som giver resultater både på kort og lang sigt.
+    </pre>
+  </div>
+
+    </div>
+
+
+    <!--Footer-->
+    <footer>
+  <div class="left">
+    <p style="font-size: 2rem;">Adva Organic Marketing</p>
+    <div class="social-icons" style="margin-top: 20px;">
+      <a href="#">Instagram</a>
+     <a href="https://www.tiktok.com/@advaorganicmarketing" target="_blank" rel="noopener noreferrer">Tiktok</a>
+      <!--<a href="#">Y</a>
+      <a href="#">I</a>-->
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="right-column" style="font-size: 1.5rem;">
+      <h4>Servicer</h4>
+      <a href="servicer/organisk.html">Organisk marketing</a>
+      <a href="servicer/foto.html">Fotografi</a>
+      <a href="servicer/video.html">Videoer</a>
+    </div>
+    <div class="right-column" style="font-size: 1.5rem;">
+      <h4>Kontakt</h4>
+      <a href="book.html">Kontakt Os</a>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>
