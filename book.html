@@ -1,25 +1,232 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book - Adva Organic Marketing</title>
-    <script defer src="navbar.js"></script>
-    <link rel="stylesheet" href="style.css">
+   <title>Adva Organic Marketing</title>
+   <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <style>
+    p.bullet {
+      font-size: 3rem;
+      position: relative;
+      padding-left: 20px; /* plads til bullet */
+    }
+
+    p.bullet::before {
+      content: "•";        /* selve bullet */
+      position: absolute;
+      left: 0;
+      color: black;        /* bullet farve */
+      font-size: 2rem;
+      line-height: 1;
+    }
+
+
+      footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #ffffff;
+    border-top: 1px solid #ccc;
+  }
+
+  .left {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left p {
+    margin: 0 0 10px 0;
+    font-size: 1rem;
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 10px;
+  }
+
+  .social-icons a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem; /* du kan erstatte med icons via <i> eller img */
+  }
+
+  .right {
+    display: flex;
+    gap: 80px;
+    size: 2rem;
+  }
+
+  .right-column h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .right-column a {
+    display: block;
+    text-decoration: none;
+    color: #555;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+  }
+  </style>
 </head>
+
 <body>
-    <div id="navbar-container"></div>
-    <main>
-        <h1>Book en aftale</h1>
-        <p>Kontakt os for at booke en tid.</p>
-    </main>
+
+    <!--Hovedbar-->
+     <div style="
+    display: flex;               /* gør indholdet til en linje */
+    align-items: center;         /* lodret centrer */
+    gap: 20px;                   /* afstand mellem elementer */
+    margin-top: 40px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5rem;
+  ">
+    <a href="index.html" style="
+      text-decoration: none;     
+      color: black;      
+      background-color: #ffffff; 
+      padding: 10px 20px; 
+      border-radius: 5px;
+      margin-left: 40px;
+      margin-right: auto;
+    ">Adva Organic Marketing</a>
+
+    <a href="index.html" style="
+      text-decoration: none;     
+      color: black;      
+      background-color: #ffffff; 
+      padding: 10px 20px; 
+      border-radius: 5px;
+    ">Home</a>
+
+    <a href="servicer.html" style="
+      text-decoration: none;     
+      color: black;      
+      background-color: #ffffff; 
+      padding: 10px 20px; 
+      border-radius: 5px;
+    ">Servicer</a>
+
+    <a href="book.html" style="
+      text-decoration: none;     
+      color: black;      
+      background-color: #ffffff; 
+      padding: 10px 20px; 
+      border-radius: 5px;
+    ">Kontakt Os</a>
+
+    <a href="os.html" style="
+      text-decoration: none;     
+      color: black;      
+      background-color: #ffffff; 
+      padding: 10px 20px; 
+      border-radius: 5px;
+    ">Om Os</a>
+     </div>
+
+      <hr style="margin-top: 40px;">
+
+<div style="display: flex; height: 100vh; font-family: Arial, sans-serif;">
+
+  <!-- Venstre halvdel med formular -->
+  <div style="flex: 1; padding: 50px; display: flex; flex-direction: column; justify-content: center; background-color: #f9f9f9;">
+    
+    <h2>Kontakt os</h2>
+    
+    <form id="contactForm" action="https://formspree.io/f/movkvgyl" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+      
+      <div style="display: flex; gap: 10px;">
+        <input type="text" name="firstname" placeholder="Fornavn" required style="flex: 1; padding: 10px;">
+        <input type="text" name="lastname" placeholder="Efternavn" required style="flex: 1; padding: 10px;">
+      </div>
+
+      <input type="email" name="email" placeholder="Email" required style="padding: 10px;">
+
+      <select id="subjectSelect" name="subject" required style="padding: 10px;">
+        <option value="">Vælg Emne</option>
+        <option value="Organisk Marketing">Organisk Marketing</option>
+        <option value="Fotografering">Fotografering</option>
+        <option value="Video">Video</option>
+        <option value="Andet">Andet</option>
+      </select>
+
+      <input type="text" id="otherSubject" name="otherSubject" placeholder="Skriv emne her" style="padding: 10px; display: none;">
+
+      <textarea name="message" placeholder="Skriv din besked her..." rows="6" required style="padding: 10px;"></textarea>
+
+      <button type="submit" 
+        style="padding: 12px; background-color: #333333; color: white; border: none; cursor: pointer;">
+  Send
+</button>
+
+    </form>
+  </div>
+
+  <!-- Højre halvdel med billede -->
+  <div style="flex: 1; background: url('https://via.placeholder.com/600x800') center/cover no-repeat;">
+  </div>
+</div>
+
+<script>
+  const subjectSelect = document.getElementById('subjectSelect');
+  const otherSubject = document.getElementById('otherSubject');
+  const contactForm = document.getElementById('contactForm');
+
+  // Viser/skjuler "Andet" input feltet
+  subjectSelect.addEventListener('change', function() {
+    if(this.value === 'Andet') {
+      otherSubject.style.display = 'block';
+      otherSubject.required = true;
+    } else {
+      otherSubject.style.display = 'none';
+      otherSubject.required = false;
+    }
+  });
+
+  // Ved submit, sæt dropdown value til "Andet"-felt hvis det er valgt
+  contactForm.addEventListener('submit', function(e) {
+    if(subjectSelect.value === "") {
+      e.preventDefault();
+      alert("Vælg venligst et emne.");
+      subjectSelect.focus();
+      return;
+    }
+
+    if(subjectSelect.value === "Andet") {
+      // Kopier teksten fra "Andet"-feltet til dropdownens value
+      subjectSelect.value = otherSubject.value;
+    }
+  });
+</script>
+
+
+
+
+          <!--Footer-->
+    <footer>
+  <div class="left">
+    <p style="font-size: 2rem;">Adva Organic Marketing</p>
+    <div class="social-icons" style="margin-top: 20px;">
+      <a href="#">Instagram</a>
+     <a href="https://www.tiktok.com/@advaorganicmarketing" target="_blank" rel="noopener noreferrer">Tiktok</a>
+      <!--<a href="#">Y</a>
+      <a href="#">I</a>-->
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="right-column" style="font-size: 1.5rem;">
+      <h4>Servicer</h4>
+      <a href="servicer/organisk.html">Organisk marketing</a>
+      <a href="servicer/foto.html">Fotografi</a>
+      <a href="servicer/video.html">Videoer</a>
+    </div>
+    <div class="right-column" style="font-size: 1.5rem;">
+      <h4>Kontact</h4>
+      <a href="kontakt.html">Kontakt Os</a>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
-<footer class="footer">
-    <div class="footer-content">
-        <p>&copy; 2024 Adva Organic Marketing. Alle rettigheder forbeholdt.</p>
-        <a href="https://www.tiktok.com/@advaorganicmarketing" class="tiktok-button" target="_blank">
-            Følg os på TikTok
-        </a>
-    </div>
-</footer>
